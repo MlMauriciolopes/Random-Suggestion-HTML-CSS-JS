@@ -1,0 +1,82 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #1c1c25;
+}
+.container
+{
+    height: 320px;
+    width: 400px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:  15px 35px rgb(0 0 0 / 50%);
+    border-radius: 15px;
+    background: #fff;
+}
+.title
+{
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px #00c3ff,
+                0 0 10px #00c3ff,
+                0 0 10px #00c3ff,
+                0 0 10px #00c3ff,
+                0 0 10px #00c3ff;
+}
+.activity
+{
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    border: 10px double rgb(255, 230, 0);
+    background: rgb(255, 253, 120);
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: rgb(20, 202, 4);
+}
+.button
+{
+    background: #0544b9;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+button:hover
+{
+    background: #0d0272;
+}
+.button:hover,
+.button:focus
+{
+    outline: 0;
+}
+input
+{
+    display: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de sugestões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Suggest Something</div>
+        <div class="activity"></div>
+        <form id="form" action="POST">
+            <input type="checkbox" name="free" id="free">
+            <button class="button" type="submit">Activity</button>
+            </form>
+    </div>
+
+    <script>
+        const endpoint = `https://www.boredapi.com/api/activity`;
+        const button = document.querySelector('.button');
+        const form = document.querySelector('#form');
+        const activityWrapper = document.querySelector('.activity');
+
+        const getActivity = async (event) => {
+            event.preventDefault();
+            const isFree = event.target.children.namedItem('free').checked;
+            let Api = isFree ? `${endpoint}?prince=0` : endpoint;
+
+            const response = await fetch(Api);
+            const json = await response.json();
+            const {activity} = json;
+            
+            activityWrapper.innerHTML = activity;
+        }
+
+        form.addEventListener("submit", getActivity);
+    </script>
+</body>
+</html>
